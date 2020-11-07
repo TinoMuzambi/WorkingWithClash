@@ -37,6 +37,7 @@ function App() {
 							onClick={getPlayerData}
 						/>
 					</form>
+					<textarea name="json" id="json" className="json" />
 				</div>
 			</div>
 		</div>

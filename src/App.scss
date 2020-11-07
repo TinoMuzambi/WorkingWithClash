@@ -42,6 +42,7 @@ body {
 				display: flex;
 				flex-direction: column;
 				gap: 2rem;
+				margin-bottom: 2rem;
 
 				.tag {
 					border-radius: 5px;
@@ -51,7 +52,8 @@ body {
 					padding: 0.5rem;
 					background: none;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
 					}
 				}
@@ -64,9 +66,23 @@ body {
 					border: solid 1px black;
 					cursor: pointer;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
 					}
+				}
+			}
+			.json {
+				resize: none;
+				width: 100% !important;
+				background: none;
+				border-radius: 0;
+				border: solid 1px black;
+				outline: none;
+
+				&:hover,
+				&:focus {
+					box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
 				}
 			}
 		}
