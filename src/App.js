@@ -5,17 +5,9 @@ function App() {
 	const [query, setQuery] = useState("");
 
 	const callAPI = async () => {
-		const URL = `https://api.clashofclans.com/v1/players/%23L98JC2LG`;
+		const URL = `http://localhost:5000/api/players/${query}`;
 		try {
-			const result = await fetch(URL, {
-				headers: {
-					Accept: "*/*",
-					"content-type": "application/json; charset=utf-8",
-					// "Access-Control-Allow-Origin": "*",
-					Authorization:
-						"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImU5NGE4YmIyLWJmODEtNGM5My1iYjUwLThkZTllMWI4YTk5OCIsImlhdCI6MTYwNDc1NDY5MCwic3ViIjoiZGV2ZWxvcGVyLzkwODg3NDg2LWI2YjQtMzY0Yy00MmI0LWY5ZmIyNjBlNjU0ZSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE5Ny4yMzkuMTQ4LjM5Il0sInR5cGUiOiJjbGllbnQifV19.NunREimF3mZ2tIYPq4-z_pMbo7F0__WrVjwOBR9YJAYmHxOS-JbBlZMAyl5NiSqeO_VZp4CqMjdlQ-YEkqTMMQ",
-				},
-			});
+			const result = await fetch(URL);
 			const data = await result.json();
 			console.log(data);
 		} catch (error) {
