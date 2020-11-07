@@ -46,7 +46,7 @@ body {
 }
 
 .forms .form-group .content {
-  overflow: scroll;
+  overflow: auto;
   padding: 2rem;
 }
 
