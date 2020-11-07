@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
+import ReactJson from "react-json-view";
 
 function App() {
 	const [playerTag, setPlayerTag] = useState("");
+	const [playerJson, setPlayerJson] = useState("");
 
 	const getPlayerData = async () => {
 		const URL = `http://localhost:5000/api/players/${playerTag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
-			console.log(data);
+			setPlayerJson(data);
 		} catch (error) {
 			console.error(error);
 		}
@@ -37,7 +39,7 @@ function App() {
 							onClick={getPlayerData}
 						/>
 					</form>
-					<textarea name="json" id="json" className="json" />
+					<ReactJson className="json" src={playerJson} />
 				</div>
 			</div>
 		</div>
