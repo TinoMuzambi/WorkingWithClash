@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import ReactJson from "react-json-view";
+import { ImSpinner8 } from "react-icons/im";
 
 function Card({ content }) {
 	const [tag, setTag] = useState("");
 	const [contentJson, setContentJson] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	const getData = async () => {
+		setLoading(true);
 		const URL = `http://localhost:5000/api/${content}/${tag}`;
 		try {
 			const result = await fetch(URL);
@@ -13,6 +16,8 @@ function Card({ content }) {
 			setContentJson(data);
 		} catch (error) {
 			console.error(error);
+		} finally {
+			setLoading(false);
 		}
 	};
 
@@ -38,7 +43,8 @@ function Card({ content }) {
 						onClick={getData}
 					/>
 				</form>
-				{contentJson && (
+				{loading && <ImSpinner8 className="spinner" />}
+				{contentJson && !loading && (
 					<ReactJson
 						className="json"
 						src={contentJson}

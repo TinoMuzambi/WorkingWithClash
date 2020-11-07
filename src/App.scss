@@ -16,8 +16,6 @@ body {
 
 .forms {
 	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
 
 	.form-group {
 		display: flex;
@@ -33,6 +31,8 @@ body {
 
 		.content {
 			overflow: auto;
+			display: flex;
+			flex-direction: column;
 			padding: 2rem;
 
 			.title {
@@ -53,6 +53,7 @@ body {
 				}
 
 				.tag {
+					margin-top: -1.5rem;
 					border-radius: 5px;
 					outline: solid 1px black;
 					border: none;
@@ -80,6 +81,22 @@ body {
 					}
 				}
 			}
+
+			.spinner {
+				margin: 0 auto;
+				font-size: 2em;
+				animation: spinLogo 2s infinite ease-out;
+			}
+
+			@keyframes spinLogo {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(359deg);
+				}
+			}
+
 			.json {
 				resize: none;
 				width: 100% !important;
