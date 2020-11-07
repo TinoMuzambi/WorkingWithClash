@@ -16,19 +16,31 @@ function App() {
 	};
 
 	return (
-		<div className="form-holder">
-			<form className="form">
-				<label htmlFor="request">Clash Player Tag</label>
-				<input
-					type="text"
-					name="request"
-					id="request"
-					className="tag"
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-				/>
-				<input type="button" value="Send" className="send" onClick={callAPI} />
-			</form>
+		<div className="forms">
+			{[1, 1, 1, 1].map((key) => (
+				<div className="form-group" key={key}>
+					<div className="content">
+						<h3 className="title">Player Info</h3>
+						<form className="form">
+							<label htmlFor="request">Clash Player Tag</label>
+							<input
+								type="text"
+								name="request"
+								id="request"
+								className="tag"
+								value={query}
+								onChange={(e) => setQuery(e.target.value)}
+							/>
+							<input
+								type="button"
+								value="Send"
+								className="send"
+								onClick={callAPI}
+							/>
+						</form>
+					</div>
+				</div>
+			))}
 		</div>
 	);
 }

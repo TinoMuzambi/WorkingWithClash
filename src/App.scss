@@ -5,44 +5,68 @@
 	font-family: sans-serif;
 }
 
-.form-holder {
-	display: flex;
+body {
 	min-height: 100vh;
-	justify-content: center;
-	align-items: center;
 	background-image: url("https://cdn.supercell.com/supercell.com/201105180339/supercell.com/files/og_clashofclans.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
-	.form {
+.forms {
+	display: flex;
+	width: 100%;
+
+	.form-group {
+		flex-wrap: wrap;
 		display: flex;
 		flex-direction: column;
-		width: 50%;
-		gap: 2rem;
-		color: white;
+		width: 100%;
+		justify-content: center;
+		margin: 2rem;
+		color: black;
+		background: rgba($color: white, $alpha: 0.7);
+		border-radius: 5px;
 
-		.tag {
-			border-radius: 0;
-			outline: none;
-			border: solid 1px solid white;
-			font-family: inherit;
-			padding: 0.5rem;
-			background: none;
-			color: white;
+		.content {
+			padding: 2rem;
 
-			&:hover {
-				box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+			.title {
+				font-weight: normal;
+				align-self: flex-start;
 			}
-		}
 
-		.send {
-			background: none;
-			outline: none;
-			font-family: inherit;
-			padding: 0.5rem;
-			border: solid 1px white;
-			cursor: pointer;
+			.form {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
 
-			&:hover {
-				box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+				.tag {
+					border-radius: 0;
+					outline: none;
+					border: solid 1px solid black;
+					font-family: inherit;
+					padding: 0.5rem;
+					background: none;
+					color: white;
+
+					&:hover {
+						box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+					}
+				}
+
+				.send {
+					background: none;
+					outline: none;
+					font-family: inherit;
+					padding: 0.5rem;
+					border: solid 1px black;
+					cursor: pointer;
+
+					&:hover {
+						box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+					}
+				}
 			}
 		}
 	}

@@ -6,21 +6,24 @@
   font-family: sans-serif;
 }
 
-.form-holder {
+body {
+  min-height: 100vh;
+  background-image: url("https://cdn.supercell.com/supercell.com/201105180339/supercell.com/files/og_clashofclans.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.forms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url("https://cdn.supercell.com/supercell.com/201105180339/supercell.com/files/og_clashofclans.jpg");
+  width: 100%;
 }
 
-.form-holder .form {
+.forms .form-group {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,36 +31,62 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
-  gap: 2rem;
-  color: white;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
 }
 
-.form-holder .form .tag {
+.forms .form-group .content {
+  padding: 2rem;
+}
+
+.forms .form-group .content .title {
+  font-weight: normal;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.forms .form-group .content .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.forms .form-group .content .form .tag {
   border-radius: 0;
   outline: none;
-  border: solid 1px solid white;
+  border: solid 1px solid black;
   font-family: inherit;
   padding: 0.5rem;
   background: none;
   color: white;
 }
 
-.form-holder .form .tag:hover {
+.forms .form-group .content .form .tag:hover {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-.form-holder .form .send {
+.forms .form-group .content .form .send {
   background: none;
   outline: none;
   font-family: inherit;
   padding: 0.5rem;
-  border: solid 1px white;
+  border: solid 1px black;
   cursor: pointer;
 }
 
-.form-holder .form .send:hover {
+.forms .form-group .content .form .send:hover {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
