@@ -55,6 +55,7 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .forms .form-group .content .form {
@@ -67,6 +68,10 @@ body {
           flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.forms .form-group .content .form .label {
+  text-transform: capitalize;
 }
 
 .forms .form-group .content .form .tag {

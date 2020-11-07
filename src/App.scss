@@ -39,6 +39,7 @@ body {
 				font-weight: normal;
 				align-self: flex-start;
 				margin-bottom: 1rem;
+				text-transform: capitalize;
 			}
 
 			.form {
@@ -46,6 +47,10 @@ body {
 				flex-direction: column;
 				gap: 2rem;
 				margin-bottom: 2rem;
+
+				.label {
+					text-transform: capitalize;
+				}
 
 				.tag {
 					border-radius: 5px;

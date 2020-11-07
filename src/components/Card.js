@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import ReactJson from "react-json-view";
 
-function Card() {
-	const [playerTag, setPlayerTag] = useState("");
-	const [playerJson, setPlayerJson] = useState("");
+function Card({ content }) {
+	const [tag, setTag] = useState("");
+	const [contentJson, setContentJson] = useState("");
 
-	const getPlayerData = async () => {
-		const URL = `http://localhost:5000/api/player/${playerTag}`;
+	const getData = async () => {
+		const URL = `http://localhost:5000/api/${content}/${tag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
-			setPlayerJson(data);
+			setContentJson(data);
 		} catch (error) {
 			console.error(error);
 		}
@@ -19,27 +19,29 @@ function Card() {
 	return (
 		<div className="form-group">
 			<div className="content">
-				<h3 className="title">Player Info</h3>
+				<h3 className="title">{content} Info</h3>
 				<form className="form">
-					<label htmlFor="request">Player Tag</label>
+					<label htmlFor="request" className="label">
+						{content} Tag
+					</label>
 					<input
 						type="text"
 						name="request"
 						className="tag"
-						value={playerTag}
-						onChange={(e) => setPlayerTag(e.target.value)}
+						value={tag}
+						onChange={(e) => setTag(e.target.value)}
 					/>
 					<input
 						type="button"
 						value="Send"
 						className="send"
-						onClick={getPlayerData}
+						onClick={getData}
 					/>
 				</form>
-				{playerJson && (
+				{contentJson && (
 					<ReactJson
 						className="json"
-						src={playerJson}
+						src={contentJson}
 						enableClipboard={false}
 						displayDataTypes={false}
 						indentWidth={2}
