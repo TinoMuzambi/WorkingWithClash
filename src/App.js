@@ -18,15 +18,16 @@ function App() {
 	return (
 		<div className="form-holder">
 			<form className="form">
-				<label htmlFor="request">Request</label>
+				<label htmlFor="request">Clash Player Tag</label>
 				<input
 					type="text"
 					name="request"
 					id="request"
+					className="tag"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 				/>
-				<input type="button" value="Send" onClick={callAPI} />
+				<input type="button" value="Send" className="send" onClick={callAPI} />
 			</form>
 		</div>
 	);

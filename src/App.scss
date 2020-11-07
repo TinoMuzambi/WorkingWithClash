@@ -4,3 +4,46 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+
+.form-holder {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://cdn.supercell.com/supercell.com/201105180339/supercell.com/files/og_clashofclans.jpg");
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		gap: 2rem;
+		color: white;
+
+		.tag {
+			border-radius: 0;
+			outline: none;
+			border: solid 1px solid white;
+			font-family: inherit;
+			padding: 0.5rem;
+			background: none;
+			color: white;
+
+			&:hover {
+				box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+			}
+		}
+
+		.send {
+			background: none;
+			outline: none;
+			font-family: inherit;
+			padding: 0.5rem;
+			border: solid 1px white;
+			cursor: pointer;
+
+			&:hover {
+				box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+			}
+		}
+	}
+}
