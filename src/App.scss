@@ -16,12 +16,12 @@ body {
 .forms {
 	display: flex;
 	width: 100%;
+	flex-wrap: wrap;
 
 	.form-group {
-		flex-wrap: wrap;
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		width: 350px;
 		justify-content: center;
 		margin: 2rem;
 		color: black;
