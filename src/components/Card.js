@@ -57,7 +57,7 @@ const Card = ({ content }) => {
 	//L98JC2LG
 
 	return (
-		<div className="form-group">
+		<div className="card">
 			<div className="content">
 				<h3 className="title">{content} Info</h3>
 				<FormikForm />

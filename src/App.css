@@ -45,7 +45,7 @@ body {
           justify-content: center;
 }
 
-.forms .form-group {
+.forms .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +66,7 @@ body {
   border-radius: 5px;
 }
 
-.forms .form-group .content {
+.forms .card .content {
   overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +78,7 @@ body {
   padding: 2rem;
 }
 
-.forms .form-group .content .title {
+.forms .card .content .title {
   font-weight: normal;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -86,7 +86,7 @@ body {
   text-transform: capitalize;
 }
 
-.forms .form-group .content .form {
+.forms .card .content .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,11 +98,11 @@ body {
   margin-bottom: 2rem;
 }
 
-.forms .form-group .content .form .label {
+.forms .card .content .form .label {
   text-transform: capitalize;
 }
 
-.forms .form-group .content .form .tag {
+.forms .card .content .form .tag {
   margin-top: -1.5rem;
   border-radius: 5px;
   outline: solid 1px black;
@@ -112,12 +112,12 @@ body {
   background: none;
 }
 
-.forms .form-group .content .form .tag:hover, .forms .form-group .content .form .tag:focus {
+.forms .card .content .form .tag:hover, .forms .card .content .form .tag:focus {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-.forms .form-group .content .form .send {
+.forms .card .content .form .send {
   background: none;
   outline: none;
   font-family: inherit;
@@ -126,12 +126,12 @@ body {
   cursor: pointer;
 }
 
-.forms .form-group .content .form .send:hover, .forms .form-group .content .form .send:focus {
+.forms .card .content .form .send:hover, .forms .card .content .form .send:focus {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-.forms .form-group .content .spinner {
+.forms .card .content .spinner {
   margin: 0 auto;
   font-size: 2em;
   -webkit-animation: spinLogo 2s infinite ease-out;
@@ -160,7 +160,7 @@ body {
   }
 }
 
-.forms .form-group .content .json {
+.forms .card .content .json {
   resize: none;
   width: 100% !important;
   height: 30rem;
@@ -170,7 +170,7 @@ body {
   outline: none;
 }
 
-.forms .form-group .content .json:hover, .forms .form-group .content .json:focus {
+.forms .card .content .json:hover, .forms .card .content .json:focus {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
