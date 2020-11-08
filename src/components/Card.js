@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
+import { withFormik } from "formik";
 
 function Card({ content }) {
 	const [tag, setTag] = useState("");
