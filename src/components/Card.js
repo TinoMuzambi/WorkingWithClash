@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
 
@@ -9,7 +9,7 @@ function Card({ content }) {
 
 	const getData = async () => {
 		setLoading(true);
-		const URL = `http://localhost:5000/api/${content}/${tag}`;
+		const URL = `https://wwc-server.herokuapp.com/api/${content}/${tag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
@@ -20,6 +20,7 @@ function Card({ content }) {
 			setLoading(false);
 		}
 	};
+	//L98JC2LG
 
 	return (
 		<div className="form-group">
