@@ -16,10 +16,11 @@ body {
 }
 
 .logo {
+	position: fixed;
 	color: white;
 	display: flex;
-	justify-content: flex-end;
-	margin: 1rem 0 0 0;
+	right: 0;
+	margin-top: 1rem;
 	overflow: hidden;
 
 	h1 {
@@ -39,7 +40,7 @@ body {
 		flex-direction: column;
 		width: 350px;
 		justify-content: center;
-		margin: 2rem;
+		margin: 8rem 2rem 0 2rem;
 		background: rgba($color: white, $alpha: 0.7);
 		box-shadow: 0px 0px 8px rgba($color: lightblue, $alpha: 0.5);
 		max-height: calc(100vh - 14rem);
