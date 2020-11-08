@@ -1,15 +1,48 @@
 import React, { useState } from "react";
 import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
+import { withFormik, Field, Form } from "formik";
 
-function Card({ content }) {
-	const [tag, setTag] = useState("");
+const Card = ({ content }) => {
 	const [contentJson, setContentJson] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	const getData = async () => {
+	const MyForm = () => {
+		return (
+			<Form className="form">
+				<label htmlFor="request" className="label">
+					{content} Tag
+				</label>
+				<Field
+					type="text"
+					name="request"
+					className="tag"
+					required
+					minLength={8}
+					maxLength={8}
+					placeholder={"PRVC8PRL"}
+				/>
+				<button className="send" type="submit">
+					Send
+				</button>
+			</Form>
+		);
+	};
+
+	const FormikForm = withFormik({
+		mapPropsToValues() {
+			return {
+				tag: "",
+			};
+		},
+		handleSubmit(values) {
+			getData(values.request);
+		},
+	})(MyForm);
+
+	const getData = async (nextTag) => {
 		setLoading(true);
-		const URL = `https://wwc-server.herokuapp.com/api/${content}/${tag}`;
+		const URL = `https://wwc-server.herokuapp.com/api/${content}/${nextTag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
@@ -20,30 +53,14 @@ function Card({ content }) {
 			setLoading(false);
 		}
 	};
+
 	//L98JC2LG
 
 	return (
-		<div className="form-group">
+		<div className="card">
 			<div className="content">
 				<h3 className="title">{content} Info</h3>
-				<form className="form">
-					<label htmlFor="request" className="label">
-						{content} Tag
-					</label>
-					<input
-						type="text"
-						name="request"
-						className="tag"
-						value={tag}
-						onChange={(e) => setTag(e.target.value)}
-					/>
-					<input
-						type="button"
-						value="Send"
-						className="send"
-						onClick={getData}
-					/>
-				</form>
+				<FormikForm />
 				{loading && <ImSpinner8 className="spinner" />}
 				{contentJson && !loading && (
 					<ReactJson
@@ -57,6 +74,6 @@ function Card({ content }) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Card;
