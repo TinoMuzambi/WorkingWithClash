@@ -60,7 +60,7 @@ const Card = ({ content }) => {
 		<div className="form-group">
 			<div className="content">
 				<h3 className="title">{content} Info</h3>
-				<FormikForm content={content} />
+				<FormikForm />
 				{loading && <ImSpinner8 className="spinner" />}
 				{contentJson && !loading && (
 					<ReactJson
