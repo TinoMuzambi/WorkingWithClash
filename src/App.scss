@@ -14,6 +14,20 @@ body {
 	background-size: cover;
 }
 
+.logo {
+	color: white;
+	display: flex;
+	justify-content: flex-end;
+	margin: 2.5rem 0;
+	overflow: hidden;
+
+	h1 {
+		background: rgba($color: black, $alpha: 0.7);
+		padding: 1rem;
+		border-radius: 5px 0 0 5px;
+	}
+}
+
 .forms {
 	display: flex;
 	flex-wrap: wrap;
