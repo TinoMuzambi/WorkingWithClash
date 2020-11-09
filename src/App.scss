@@ -7,12 +7,10 @@
 
 body {
 	min-height: 100vh;
-	max-height: 100vh;
 	background-image: url("https://cdn.supercell.com/supercell.com/201105180339/supercell.com/files/og_clashofclans.jpg");
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-position: center;
 	background-size: cover;
-	overflow: hidden;
 }
 
 .logo {
