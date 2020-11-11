@@ -63,6 +63,24 @@ body {
   border-radius: 5px;
 }
 
+.forms .card .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.forms .card .center ul {
+  list-style-type: none;
+}
+
 .forms .card .content {
   overflow: auto;
   display: -webkit-box;

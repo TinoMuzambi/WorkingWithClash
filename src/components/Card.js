@@ -19,7 +19,7 @@ const Card = ({ content }) => {
 					className="tag"
 					required
 					minLength={8}
-					maxLength={8}
+					maxLength={9}
 					placeholder={"PRVC8PRL"}
 				/>
 				<button className="send" type="submit">
@@ -76,7 +76,7 @@ const Card = ({ content }) => {
 			</div>
 			{content === "player" && contentJson && (
 				<div className="card">
-					<div className="content">
+					<div className="content center">
 						<img
 							src={contentJson.league.iconUrls.medium}
 							alt={contentJson.league.name}
