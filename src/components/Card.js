@@ -57,22 +57,51 @@ const Card = ({ content }) => {
 	//L98JC2LG
 
 	return (
-		<div className="card">
-			<div className="content">
-				<h3 className="title">{content} Info</h3>
-				<FormikForm />
-				{loading && <ImSpinner8 className="spinner" />}
-				{contentJson && !loading && (
-					<ReactJson
-						className="json"
-						src={contentJson}
-						enableClipboard={false}
-						displayDataTypes={false}
-						indentWidth={2}
-					/>
-				)}
+		<>
+			<div className="card">
+				<div className="content">
+					<h3 className="title">{content} Info</h3>
+					<FormikForm />
+					{loading && <ImSpinner8 className="spinner" />}
+					{contentJson && !loading && (
+						<ReactJson
+							className="json"
+							src={contentJson}
+							enableClipboard={false}
+							displayDataTypes={false}
+							indentWidth={2}
+						/>
+					)}
+				</div>
 			</div>
-		</div>
+			{content === "player" && contentJson && (
+				<div className="card">
+					<div className="content">
+						<img
+							src={contentJson.league.iconUrls.medium}
+							alt={contentJson.league.name}
+						/>
+						<h1>{contentJson.name}</h1>
+						<h3>{contentJson.tag}</h3>
+						<ul>
+							<li>Town Hall {contentJson.townHallLevel}</li>
+							<li>{contentJson.trophies} Trophies</li>
+							<li>{contentJson.warStars} War Stars</li>
+							<li>{contentJson.donations} Donations </li>
+							<li>{contentJson.donationsReceived} Donations Received</li>
+						</ul>
+
+						<h2>Troops</h2>
+						{contentJson.troops.map((troop, key) => (
+							<div key={key}>
+								<h3>{troop.name}</h3>
+								<p>Level {troop.level}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			)}
+		</>
 	);
 };
 
