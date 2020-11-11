@@ -78,24 +78,24 @@ const Card = ({ content }) => {
 				<div className="card">
 					<div className="content center">
 						<img
-							src={contentJson.league.iconUrls.medium}
-							alt={contentJson.league.name}
+							src={contentJson?.league?.iconUrls.medium}
+							alt={contentJson?.league?.name}
 						/>
-						<h1>{contentJson.name}</h1>
-						<h3>{contentJson.tag}</h3>
+						<h1>{contentJson?.name}</h1>
+						<h3>{contentJson?.tag}</h3>
 						<ul>
-							<li>Town Hall {contentJson.townHallLevel}</li>
-							<li>{contentJson.trophies} Trophies</li>
-							<li>{contentJson.warStars} War Stars</li>
-							<li>{contentJson.donations} Donations </li>
-							<li>{contentJson.donationsReceived} Donations Received</li>
+							<li>Town Hall {contentJson?.townHallLevel}</li>
+							<li>{contentJson?.trophies} Trophies</li>
+							<li>{contentJson?.warStars} War Stars</li>
+							<li>{contentJson?.donations} Donations </li>
+							<li>{contentJson?.donationsReceived} Donations Received</li>
 						</ul>
 
 						<h2>Troops</h2>
-						{contentJson.troops.map((troop, key) => (
+						{contentJson?.troops.map((troop, key) => (
 							<div key={key}>
-								<h3>{troop.name}</h3>
-								<p>Level {troop.level}</p>
+								<h3>{troop?.name}</h3>
+								<p>Level {troop?.level}</p>
 							</div>
 						))}
 					</div>

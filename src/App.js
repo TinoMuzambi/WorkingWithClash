@@ -10,6 +10,7 @@ function App() {
 			</div>
 			<div className="forms">
 				<Card content="player" />
+				<Card content="player" />
 				<Card content="clan" />
 			</div>
 		</>
