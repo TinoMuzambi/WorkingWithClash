@@ -28,6 +28,18 @@ body {
 	}
 }
 
+.info-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.info {
+		color: white;
+		padding-top: 10rem;
+		margin: 0 auto;
+	}
+}
+
 .forms {
 	display: flex;
 	flex-wrap: wrap;
