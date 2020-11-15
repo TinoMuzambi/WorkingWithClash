@@ -4,7 +4,7 @@ A React app demonstrating a simple use case of the Clash of Clans API. Visit it 
 
 ## API
 
-The API is freely available at this [URL](https://developer.clashofclans.com/)
+The API is freely available at this [URL](https://developer.clashofclans.com/). 
 
 ## Back-end
 
