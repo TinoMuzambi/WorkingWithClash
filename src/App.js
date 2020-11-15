@@ -8,8 +8,9 @@ function App() {
 			<div className="logo">
 				<h1>Working with Clash</h1>
 			</div>
-                        <h3>Paste L98JC2LG in the player tag to view my profile.</h3>
+                        
 			<div className="forms">
+                                <h3>Paste L98JC2LG in the player info section to view my profile.</h3>
 				<Card content="player" />
 				<Card content="clan" />
 			</div>
