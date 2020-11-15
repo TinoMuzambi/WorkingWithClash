@@ -4,7 +4,11 @@ A React app demonstrating a simple use case of the Clash of Clans API. Visit it 
 
 ## API
 
-The API is freely available at this [url](https://developer.clashofclans.com/)
+The API is freely available at this [URL](https://developer.clashofclans.com/)
+
+## Back-end
+
+The back-end code is available at this [URL](https://github.com/TinoMuzambi/WWC-Server).
 
 ## Run Locally
 
