@@ -45,8 +45,7 @@ body {
 
 .info-wrapper .info {
   color: white;
-  padding-top: 10rem;
-  margin: 0 auto;
+  padding: 10rem 0 0 2rem;
 }
 
 .forms {
