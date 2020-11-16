@@ -34,7 +34,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 8rem;
+	padding-top: 5rem;
 	width: 100%;
 	text-align: center;
 
@@ -43,7 +43,7 @@ body {
 		padding: 1rem;
 		border-radius: 5px;
 		color: white;
-		width: 50%;
+		width: 35%;
 	}
 }
 
@@ -173,5 +173,12 @@ body {
 	body {
 		background-repeat: repeat-y;
 		overflow: scroll;
+	}
+
+	.info-wrapper {
+		padding-top: 6rem;
+		.info {
+			width: 350px;
+		}
 	}
 }
