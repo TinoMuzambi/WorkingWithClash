@@ -41,11 +41,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 7rem;
+  width: 100%;
+  text-align: center;
 }
 
 .info-wrapper .info {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 5px;
   color: white;
-  padding: 10rem 0 0 2rem;
+  width: 50%;
 }
 
 .forms {
@@ -71,7 +77,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 8rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 2rem;
   background: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 0px 0px 8px rgba(173, 216, 230, 0.5);
           box-shadow: 0px 0px 8px rgba(173, 216, 230, 0.5);

@@ -42,7 +42,9 @@ const Card = ({ content }) => {
 
 	const getData = async (nextTag) => {
 		setLoading(true);
-		const URL = `https://wwc-server.herokuapp.com/api/${content}/${nextTag}`;
+		let tag = nextTag.trim();
+		tag = tag.replace("#", "");
+		const URL = `https://wwc-server.herokuapp.com/api/${content}/${tag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
@@ -70,6 +72,7 @@ const Card = ({ content }) => {
 							enableClipboard={false}
 							displayDataTypes={false}
 							indentWidth={2}
+							collapsed={true}
 						/>
 					)}
 				</div>
