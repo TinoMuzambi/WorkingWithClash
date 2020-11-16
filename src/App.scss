@@ -182,3 +182,16 @@ body {
 		}
 	}
 }
+@media only screen and (max-width: 320px) {
+	body {
+		background-repeat: repeat-y;
+		overflow: scroll;
+	}
+
+	.info-wrapper {
+		padding-top: 6rem;
+		.info {
+			width: 256px;
+		}
+	}
+}
