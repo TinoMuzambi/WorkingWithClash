@@ -20,8 +20,10 @@ body {
 	right: 0;
 	margin-top: 1rem;
 	overflow: hidden;
+	font-size: 0.8rem;
 
 	h1 {
+		text-align: right;
 		background: rgba($color: black, $alpha: 0.7);
 		padding: 1rem;
 		border-radius: 5px 0 0 5px;
@@ -32,7 +34,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 7rem;
+	padding-top: 8rem;
 	width: 100%;
 	text-align: center;
 
@@ -78,6 +80,10 @@ body {
 			display: flex;
 			flex-direction: column;
 			padding: 2rem;
+
+			img {
+				width: 100%;
+			}
 
 			.title {
 				font-weight: normal;
