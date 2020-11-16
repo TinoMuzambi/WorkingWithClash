@@ -90,15 +90,17 @@ const Card = ({ content }) => {
 							<li>Town Hall {contentJson?.townHallLevel}</li>
 							<li>{contentJson?.trophies} Trophies</li>
 							<li>{contentJson?.warStars} War Stars</li>
-							<li>{contentJson?.donations} Donations </li>
+							<li>{contentJson?.donations} Donations Given</li>
 							<li>{contentJson?.donationsReceived} Donations Received</li>
 						</ul>
 
-						<h2>Troops</h2>
+						<h1 className="troops">Troops</h1>
 						{contentJson?.troops.map((troop, key) => (
 							<div key={key}>
 								<h3>{troop?.name}</h3>
-								<p>Level {troop?.level}</p>
+								<p>
+									Level {troop?.level}/{troop?.maxLevel}
+								</p>
 							</div>
 						))}
 					</div>
