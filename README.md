@@ -14,7 +14,7 @@ The back-end code is available at this [URL](https://github.com/TinoMuzambi/WWC-
 
 To run this app in development, clone this repo and then run the following commands:
 
-1. `cd clash`
+1. `cd WorkingWithClash`
 2. `npm i`
 3. `npm start`
 
