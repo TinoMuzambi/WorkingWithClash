@@ -53,6 +53,8 @@ body {
 	justify-content: center;
 
 	.motion-wrap {
+		display: flex;
+
 		.card {
 			display: flex;
 			flex-direction: column;
