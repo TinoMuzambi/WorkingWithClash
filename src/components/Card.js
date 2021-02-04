@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
 import { withFormik, Field, Form } from "formik";
+import { motion } from "framer-motion";
 
 const Card = ({ content }) => {
 	const [contentJson, setContentJson] = useState("");
@@ -59,7 +60,7 @@ const Card = ({ content }) => {
 	//L98JC2LG
 
 	return (
-		<>
+		<motion.div className="motion-wrap" layout>
 			<div className="card">
 				<div className="content">
 					<h3 className="title">{content} Info</h3>
@@ -106,7 +107,7 @@ const Card = ({ content }) => {
 					</div>
 				</div>
 			)}
-		</>
+		</motion.div>
 	);
 };
 
