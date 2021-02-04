@@ -173,6 +173,12 @@ body {
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	.motion-wrap {
+		flex-direction: column;
+	}
+}
+
 @media only screen and (max-width: 500px) {
 	body {
 		background-repeat: repeat-y;
