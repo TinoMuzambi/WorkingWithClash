@@ -57,6 +57,7 @@ const Card = ({ content }) => {
 		}
 	};
 
+	// Animated counter that returns animated p tag.
 	const Counter = ({ from, to }) => {
 		const nodeRef = useRef();
 
@@ -74,6 +75,14 @@ const Card = ({ content }) => {
 		}, [from, to]);
 
 		return <p ref={nodeRef} />;
+	};
+
+	const getLeagueClass = (league) => {
+		if (league.toLowerCase().includes("titan")) {
+			return "titan";
+		} else {
+			return "champions";
+		}
 	};
 
 	//L98JC2LG
@@ -106,52 +115,74 @@ const Card = ({ content }) => {
 						/>
 						<div className="flex">
 							<h1>{contentJson?.name}</h1>
-							<p className="xp">{contentJson?.expLevel}</p>
+							<p className={`xp ${getLeagueClass(contentJson?.league?.name)}`}>
+								{contentJson?.expLevel}
+							</p>
 						</div>
 						<h3>{contentJson?.tag}</h3>
 						<ul>
 							<li>
-								<span>Town Hall</span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
+									Town Hall
+								</span>
 								<Counter from={0} to={contentJson?.townHallLevel} />
 							</li>
 							<li>
 								<Counter from={0} to={contentJson?.trophies} />
-								<span>Trophies</span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
+									Trophies
+								</span>
 							</li>
 							<li>
 								Trophies Best
-								<span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.bestTrophies} />
 								</span>
 							</li>
 							<li>
-								<span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.warStars} />
 								</span>
 								War Stars
 							</li>
 							<li>
-								<span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.donations} />
 								</span>
 								Donations Given
 							</li>
 							<li>
-								<span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.donationsReceived} />
 								</span>
 								Donations Received
 							</li>
 							<li>
-								Builder Hall{" "}
-								<span>
+								Builder Hall
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.builderHallLevel} />
 								</span>
 							</li>
 							<li>
-								<span>
+								<span
+									className={`${getLeagueClass(contentJson?.league?.name)}`}
+								>
 									<Counter from={0} to={contentJson?.versusTrophies} />
-								</span>{" "}
+								</span>
 								Versus Trophies
 							</li>
 						</ul>
