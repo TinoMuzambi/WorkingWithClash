@@ -93,9 +93,12 @@ const Card = ({ content }) => {
 						<ul>
 							<li>Town Hall {contentJson?.townHallLevel}</li>
 							<li>{contentJson?.trophies} Trophies</li>
+							<li>Trophies Best {contentJson?.bestTrophies}</li>
 							<li>{contentJson?.warStars} War Stars</li>
 							<li>{contentJson?.donations} Donations Given</li>
 							<li>{contentJson?.donationsReceived} Donations Received</li>
+							<li>Builder Hall {contentJson?.builderHallLevel}</li>
+							<li>{contentJson?.versusTrophies} Versus Trophies</li>
 						</ul>
 
 						<h1 className="troops">Troops</h1>

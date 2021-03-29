@@ -72,10 +72,6 @@ body {
 				flex-direction: column;
 				align-items: center;
 				text-align: center;
-
-				ul {
-					list-style-type: none;
-				}
 			}
 
 			.content {
@@ -84,10 +80,6 @@ body {
 				flex-direction: column;
 				padding: 2rem;
 
-				img {
-					width: 100%;
-				}
-
 				.title {
 					font-weight: normal;
 					align-self: flex-start;
@@ -95,19 +87,8 @@ body {
 					text-transform: capitalize;
 				}
 
-				.flex {
-					display: flex;
-					align-items: center;
-					gap: 0.2rem;
-
-					.xp {
-						padding: 0.3rem;
-						margin-top: -1.5rem;
-						font-size: 0.7rem;
-						background: cornflowerblue;
-						color: white;
-						border-radius: 10000px;
-					}
+				img {
+					width: 100%;
 				}
 
 				.form {
@@ -154,17 +135,16 @@ body {
 					margin: 0 auto;
 					font-size: 2em;
 					animation: spinLogo 2s infinite ease-out;
-				}
 
-				@keyframes spinLogo {
-					from {
-						transform: rotate(0deg);
-					}
-					to {
-						transform: rotate(359deg);
+					@keyframes spinLogo {
+						from {
+							transform: rotate(0deg);
+						}
+						to {
+							transform: rotate(359deg);
+						}
 					}
 				}
-
 				.json {
 					resize: none;
 					width: 100% !important;
@@ -177,6 +157,36 @@ body {
 					&:hover,
 					&:focus {
 						box-shadow: 0px 0px 8px rgba($color: black, $alpha: 0.5);
+					}
+				}
+				.flex {
+					display: flex;
+					align-items: center;
+					gap: 0.2rem;
+
+					.xp {
+						padding: 0.3rem;
+						margin-top: -1.5rem;
+						font-size: 0.7rem;
+						background: cornflowerblue;
+						color: white;
+						border-radius: 10000px;
+					}
+				}
+
+				ul {
+					list-style-type: none;
+					display: flex;
+					flex-wrap: wrap;
+					margin-top: 1rem;
+
+					li {
+						background: #33333385;
+						color: white;
+						margin: 0.4rem;
+						height: 5rem;
+						width: 5rem;
+						border-radius: 0.5rem;
 					}
 				}
 
