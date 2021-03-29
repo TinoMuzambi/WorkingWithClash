@@ -85,8 +85,10 @@ const Card = ({ content }) => {
 							src={contentJson?.league?.iconUrls.medium}
 							alt={contentJson?.league?.name}
 						/>
-						<h1>{contentJson?.name}</h1>
-						<p className="xp">{contentJson?.expLevel}</p>
+						<div className="flex">
+							<h1>{contentJson?.name}</h1>
+							<p className="xp">{contentJson?.expLevel}</p>
+						</div>
 						<h3>{contentJson?.tag}</h3>
 						<ul>
 							<li>Town Hall {contentJson?.townHallLevel}</li>
