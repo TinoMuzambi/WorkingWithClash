@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
 import { withFormik, Field, Form } from "formik";
-import { motion } from "framer-motion";
+import { motion, animate } from "framer-motion";
 
 const Card = ({ content }) => {
 	const [contentJson, setContentJson] = useState("");
@@ -57,6 +57,25 @@ const Card = ({ content }) => {
 		}
 	};
 
+	const Counter = ({ from, to }) => {
+		const nodeRef = useRef();
+
+		useEffect(() => {
+			const node = nodeRef.current;
+
+			const controls = animate(from, to, {
+				duration: 1,
+				onUpdate(value) {
+					node.textContent = value.toFixed(0);
+				},
+			});
+
+			return () => controls.stop();
+		}, [from, to]);
+
+		return <p ref={nodeRef} />;
+	};
+
 	//L98JC2LG
 
 	return (
@@ -91,14 +110,50 @@ const Card = ({ content }) => {
 						</div>
 						<h3>{contentJson?.tag}</h3>
 						<ul>
-							<li>Town Hall {contentJson?.townHallLevel}</li>
-							<li>{contentJson?.trophies} Trophies</li>
-							<li>Trophies Best {contentJson?.bestTrophies}</li>
-							<li>{contentJson?.warStars} War Stars</li>
-							<li>{contentJson?.donations} Donations Given</li>
-							<li>{contentJson?.donationsReceived} Donations Received</li>
-							<li>Builder Hall {contentJson?.builderHallLevel}</li>
-							<li>{contentJson?.versusTrophies} Versus Trophies</li>
+							<li>
+								<span>Town Hall</span>
+								<Counter from={0} to={contentJson?.townHallLevel} />
+							</li>
+							<li>
+								<Counter from={0} to={contentJson?.trophies} />
+								<span>Trophies</span>
+							</li>
+							<li>
+								Trophies Best
+								<span>
+									<Counter from={0} to={contentJson?.bestTrophies} />
+								</span>
+							</li>
+							<li>
+								<span>
+									<Counter from={0} to={contentJson?.warStars} />
+								</span>
+								War Stars
+							</li>
+							<li>
+								<span>
+									<Counter from={0} to={contentJson?.donations} />
+								</span>
+								Donations Given
+							</li>
+							<li>
+								<span>
+									<Counter from={0} to={contentJson?.donationsReceived} />
+								</span>
+								Donations Received
+							</li>
+							<li>
+								Builder Hall{" "}
+								<span>
+									<Counter from={0} to={contentJson?.builderHallLevel} />
+								</span>
+							</li>
+							<li>
+								<span>
+									<Counter from={0} to={contentJson?.versusTrophies} />
+								</span>{" "}
+								Versus Trophies
+							</li>
 						</ul>
 
 						<h1 className="troops">Troops</h1>
