@@ -8,7 +8,7 @@
 $legend: rgb(139, 87, 254);
 $titan: rgb(249, 218, 71);
 $champions: rgb(227, 123, 88);
-$master: rgb(133, 128, 130);
+$masters: rgb(133, 128, 130);
 $crystal: rgb(217, 87, 242);
 $gold: rgb(168, 110, 35);
 $silver: rgb(73, 87, 98);
@@ -182,8 +182,32 @@ body {
 						color: white;
 						border-radius: 10000px;
 
+						&.legend {
+							background: $legend;
+						}
 						&.titan {
-							background: rgb(249, 218, 71);
+							background: $titan;
+						}
+						&.champions {
+							background: $champions;
+						}
+						&.masters {
+							background: $masters;
+						}
+						&.crystal {
+							background: $crystal;
+						}
+						&.gold {
+							background: $gold;
+						}
+						&.silver {
+							background: $silver;
+						}
+						&.bronze {
+							background: $bronze;
+						}
+						&.none {
+							background: $none;
 						}
 					}
 				}
@@ -213,8 +237,32 @@ body {
 							font-size: 1.3rem;
 							font-weight: 900;
 
+							&.legend {
+								color: $legend;
+							}
 							&.titan {
 								color: $titan;
+							}
+							&.champions {
+								color: $champions;
+							}
+							&.masters {
+								color: $masters;
+							}
+							&.crystal {
+								color: $crystal;
+							}
+							&.gold {
+								color: $gold;
+							}
+							&.silver {
+								color: $silver;
+							}
+							&.bronze {
+								color: $bronze;
+							}
+							&.none {
+								color: $none;
 							}
 						}
 					}
