@@ -92,8 +92,10 @@ const Card = ({ content }) => {
 			return "gold";
 		} else if (league.toLowerCase().includes("silver")) {
 			return "silver";
-		} else {
+		} else if (league.toLowerCase().includes("bronze")) {
 			return "bronze";
+		} else {
+			return "none";
 		}
 	};
 
