@@ -86,6 +86,7 @@ const Card = ({ content }) => {
 							alt={contentJson?.league?.name}
 						/>
 						<h1>{contentJson?.name}</h1>
+						<p className="xp">{contentJson?.expLevel}</p>
 						<h3>{contentJson?.tag}</h3>
 						<ul>
 							<li>Town Hall {contentJson?.townHallLevel}</li>
