@@ -80,7 +80,7 @@ body {
 			border-radius: 5px;
 
 			&.double {
-				width: 500px;
+				width: 700px;
 			}
 
 			.center {
@@ -104,7 +104,8 @@ body {
 				}
 
 				img {
-					width: 100%;
+					width: 40%;
+					object-fit: contain;
 				}
 
 				.form {
@@ -297,8 +298,18 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-	.motion-wrap {
-		flex-direction: column;
+	.forms {
+		.motion-wrap {
+			flex-direction: column;
+
+			.card {
+				width: 500px;
+
+				&.double {
+					width: 500px;
+				}
+			}
+		}
 	}
 }
 
@@ -312,6 +323,18 @@ body {
 		padding-top: 6rem;
 		.info {
 			width: 350px;
+		}
+	}
+
+	.forms {
+		.motion-wrap {
+			.card {
+				width: 300px;
+
+				&.double {
+					width: 300px;
+				}
+			}
 		}
 	}
 }
