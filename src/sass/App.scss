@@ -271,6 +271,13 @@ body {
 
 				.troops {
 					margin: 1rem 0;
+
+					.troop {
+						img {
+							width: 100%;
+							object-fit: contain;
+						}
+					}
 				}
 			}
 		}
