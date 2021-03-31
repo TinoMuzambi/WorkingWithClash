@@ -16,7 +16,7 @@ function App() {
 
 			<div className="forms">
 				<Card content="player" />
-				<Card content="clan" />
+				{/* <Card content="clan" /> */}
 			</div>
 		</>
 	);

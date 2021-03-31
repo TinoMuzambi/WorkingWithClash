@@ -96,6 +96,10 @@ body {
   border-radius: 5px;
 }
 
+.forms .motion-wrap .card.double {
+  width: 500px;
+}
+
 .forms .motion-wrap .card .center {
   display: -webkit-box;
   display: -ms-flexbox;

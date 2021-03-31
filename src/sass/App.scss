@@ -79,6 +79,10 @@ body {
 			overflow: hidden;
 			border-radius: 5px;
 
+			&.double {
+				width: 500px;
+			}
+
 			.center {
 				display: flex;
 				flex-direction: column;

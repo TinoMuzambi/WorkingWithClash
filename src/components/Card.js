@@ -121,7 +121,7 @@ const Card = ({ content }) => {
 				</div>
 			</div>
 			{content === "player" && contentJson && (
-				<div className="card">
+				<div className="card double">
 					<div className="content center">
 						<img
 							src={contentJson?.league?.iconUrls.medium}
