@@ -359,12 +359,27 @@ body {
   color: #898d8e;
 }
 
-.forms .motion-wrap .card .content .troops {
+.forms .motion-wrap .card .content .troops-title {
   margin: 1rem 0;
 }
 
-.forms .motion-wrap .card .content .troops .troop img {
-  width: 100%;
+.forms .motion-wrap .card .content .troops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.forms .motion-wrap .card .content .troops .troop .troop-image {
+  width: 100px;
   -o-object-fit: contain;
      object-fit: contain;
 }

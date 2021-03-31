@@ -201,19 +201,22 @@ const Card = ({ content }) => {
 							</li>
 						</ul>
 
-						<h1 className="troops">Troops</h1>
-						{contentJson?.troops.map((troop, key) => (
-							<div className="troop" key={key}>
-								<img
-									src={`/assets/${troop?.name.replace(" ", "_")}_info.png`}
-									alt={troop?.name}
-								/>
-								<h3>{troop?.name}</h3>
-								<p>
-									Level {troop?.level}/{troop?.maxLevel}
-								</p>
-							</div>
-						))}
+						<h1 className="troops-title">Troops</h1>
+						<div className="troops">
+							{contentJson?.troops.map((troop, key) => (
+								<div className="troop" key={key}>
+									<img
+										className="troop-image"
+										src={`/assets/${troop?.name.replace(" ", "_")}_info.png`}
+										alt={troop?.name}
+									/>
+									<h3>{troop?.name}</h3>
+									<p>
+										Level {troop?.level}/{troop?.maxLevel}
+									</p>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			)}

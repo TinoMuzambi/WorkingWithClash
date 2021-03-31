@@ -273,12 +273,20 @@ body {
 					}
 				}
 
-				.troops {
+				.troops-title {
 					margin: 1rem 0;
+				}
+
+				.troops {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-wrap: wrap;
+					gap: 2rem;
 
 					.troop {
-						img {
-							width: 100%;
+						.troop-image {
+							width: 100px;
 							object-fit: contain;
 						}
 					}
