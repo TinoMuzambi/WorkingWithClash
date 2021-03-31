@@ -204,7 +204,10 @@ const Card = ({ content }) => {
 						<h1 className="troops">Troops</h1>
 						{contentJson?.troops.map((troop, key) => (
 							<div className="troop" key={key}>
-								<img src="/assets/Miner_info.png" alt="troop" />
+								<img
+									src={`/assets/${troop?.name.replace(" ", "_")}_info.png`}
+									alt={troop?.name}
+								/>
 								<h3>{troop?.name}</h3>
 								<p>
 									Level {troop?.level}/{troop?.maxLevel}
