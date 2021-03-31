@@ -78,21 +78,21 @@ const Card = ({ content }) => {
 	};
 
 	const getLeagueClass = (league) => {
-		if (league.toLowerCase().includes("legend")) {
+		if (league?.toLowerCase().includes("legend")) {
 			return "legend";
-		} else if (league.toLowerCase().includes("titan")) {
+		} else if (league?.toLowerCase().includes("titan")) {
 			return "titan";
-		} else if (league.toLowerCase().includes("champion")) {
+		} else if (league?.toLowerCase().includes("champion")) {
 			return "champions";
-		} else if (league.toLowerCase().includes("master")) {
+		} else if (league?.toLowerCase().includes("master")) {
 			return "masters";
-		} else if (league.toLowerCase().includes("crystal")) {
+		} else if (league?.toLowerCase().includes("crystal")) {
 			return "crystal";
-		} else if (league.toLowerCase().includes("gold")) {
+		} else if (league?.toLowerCase().includes("gold")) {
 			return "gold";
-		} else if (league.toLowerCase().includes("silver")) {
+		} else if (league?.toLowerCase().includes("silver")) {
 			return "silver";
-		} else if (league.toLowerCase().includes("bronze")) {
+		} else if (league?.toLowerCase().includes("bronze")) {
 			return "bronze";
 		} else {
 			return "none";
