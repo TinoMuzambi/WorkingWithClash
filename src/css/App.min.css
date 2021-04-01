@@ -380,10 +380,78 @@ body {
   gap: 2rem;
 }
 
+.forms .motion-wrap .card .content .troops .troop:hover .level {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .forms .motion-wrap .card .content .troops .troop .troop-image {
   width: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.forms .motion-wrap .card .content .troops .name,
+.forms .motion-wrap .card .content .troops .level {
+  background: #333333;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.forms .motion-wrap .card .content .troops .name.legend,
+.forms .motion-wrap .card .content .troops .level.legend {
+  color: #8b57fe;
+}
+
+.forms .motion-wrap .card .content .troops .name.titan,
+.forms .motion-wrap .card .content .troops .level.titan {
+  color: #f9da47;
+}
+
+.forms .motion-wrap .card .content .troops .name.champions,
+.forms .motion-wrap .card .content .troops .level.champions {
+  color: #e37b58;
+}
+
+.forms .motion-wrap .card .content .troops .name.masters,
+.forms .motion-wrap .card .content .troops .level.masters {
+  color: #858082;
+}
+
+.forms .motion-wrap .card .content .troops .name.crystal,
+.forms .motion-wrap .card .content .troops .level.crystal {
+  color: #d957f2;
+}
+
+.forms .motion-wrap .card .content .troops .name.gold,
+.forms .motion-wrap .card .content .troops .level.gold {
+  color: #a86e23;
+}
+
+.forms .motion-wrap .card .content .troops .name.silver,
+.forms .motion-wrap .card .content .troops .level.silver {
+  color: #495762;
+}
+
+.forms .motion-wrap .card .content .troops .name.bronze,
+.forms .motion-wrap .card .content .troops .level.bronze {
+  color: #9e6a47;
+}
+
+.forms .motion-wrap .card .content .troops .name.none,
+.forms .motion-wrap .card .content .troops .level.none {
+  color: #898d8e;
+}
+
+.forms .motion-wrap .card .content .troops .name {
+  z-index: 1;
+}
+
+.forms .motion-wrap .card .content .troops .level {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 @media only screen and (max-width: 768px) {

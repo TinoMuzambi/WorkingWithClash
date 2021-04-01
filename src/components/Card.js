@@ -210,8 +210,18 @@ const Card = ({ content }) => {
 										src={`/assets/${troop?.name.replace(" ", "_")}_info.png`}
 										alt={troop?.name}
 									/>
-									<h3>{troop?.name}</h3>
-									<p>
+									<h3
+										className={`name ${getLeagueClass(
+											contentJson?.league?.name
+										)}`}
+									>
+										{troop?.name}
+									</h3>
+									<p
+										className={`level ${getLeagueClass(
+											contentJson?.league?.name
+										)}`}
+									>
 										Level {troop?.level}/{troop?.maxLevel}
 									</p>
 								</div>
