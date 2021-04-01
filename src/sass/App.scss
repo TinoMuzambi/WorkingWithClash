@@ -356,6 +356,15 @@ body {
 				&.double {
 					width: 500px;
 				}
+
+				.troops {
+					.troop {
+						.level {
+							transform: translateY(0rem);
+							transition: 0.2s ease;
+						}
+					}
+				}
 			}
 		}
 	}
