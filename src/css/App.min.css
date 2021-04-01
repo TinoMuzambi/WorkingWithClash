@@ -473,6 +473,9 @@ body {
   .forms .motion-wrap .card.double {
     width: 500px;
   }
+  .forms .motion-wrap .card .troops .troop .name {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
   .forms .motion-wrap .card .troops .troop .level {
     -webkit-transform: translateY(0rem);
             transform: translateY(0rem);
