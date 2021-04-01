@@ -286,6 +286,10 @@ body {
 					gap: 2rem;
 
 					.troop {
+						&:hover .name {
+							border-radius: 0.5rem 0.5rem 0 0;
+						}
+
 						&:hover .level {
 							transform: translateY(0);
 						}
@@ -333,11 +337,13 @@ body {
 
 					.name {
 						z-index: 1;
+						border-radius: 0.5rem;
 					}
 
 					.level {
 						transform: translateY(-2rem);
 						transition: 0.2s ease;
+						border-radius: 0 0 0.5rem 0.5rem;
 					}
 				}
 			}

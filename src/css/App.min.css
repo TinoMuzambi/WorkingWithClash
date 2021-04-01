@@ -380,6 +380,10 @@ body {
   gap: 2rem;
 }
 
+.forms .motion-wrap .card .content .troops .troop:hover .name {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
 .forms .motion-wrap .card .content .troops .troop:hover .level {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -445,6 +449,7 @@ body {
 
 .forms .motion-wrap .card .content .troops .name {
   z-index: 1;
+  border-radius: 0.5rem;
 }
 
 .forms .motion-wrap .card .content .troops .level {
@@ -452,6 +457,7 @@ body {
           transform: translateY(-2rem);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
