@@ -449,15 +449,11 @@ body {
 
 .forms .motion-wrap .card .content .troops .name {
   z-index: 1;
-  border-radius: 0.5rem;
 }
 
 .forms .motion-wrap .card .content .troops .level {
-  -webkit-transform: translateY(-2rem);
-          transform: translateY(-2rem);
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  border-radius: 0 0 0.5rem 0.5rem;
+  -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
 }
 
 @media only screen and (max-width: 768px) {
