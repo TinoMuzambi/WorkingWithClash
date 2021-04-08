@@ -354,13 +354,8 @@ body {
 
 				.troops {
 					.troop {
-						.name {
-							border-radius: 0.5rem 0.5rem 0 0;
-						}
-
 						.level {
-							transform: translateY(0rem);
-							transition: 0.2s ease;
+							clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
 						}
 					}
 				}

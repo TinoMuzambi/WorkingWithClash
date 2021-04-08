@@ -464,14 +464,9 @@ body {
   .forms .motion-wrap .card.double {
     width: 500px;
   }
-  .forms .motion-wrap .card .troops .troop .name {
-    border-radius: 0.5rem 0.5rem 0 0;
-  }
   .forms .motion-wrap .card .troops .troop .level {
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
   }
 }
 
