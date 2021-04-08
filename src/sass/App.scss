@@ -286,12 +286,8 @@ body {
 					gap: 2rem;
 
 					.troop {
-						&:hover .name {
-							border-radius: 0.5rem 0.5rem 0 0;
-						}
-
 						&:hover .level {
-							transform: translateY(0);
+							clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
 						}
 
 						.troop-image {
@@ -304,7 +300,6 @@ body {
 					.level {
 						background: rgb(51, 51, 51);
 						padding: 0.5rem;
-						position: relative;
 
 						&.legend {
 							color: $legend;
@@ -335,13 +330,9 @@ body {
 						}
 					}
 
-					.name {
-						z-index: 1;
-						// border-radius: 0.5rem;
-					}
-
 					.level {
-						clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
+						clip-path: polygon(0 1%, 100% 0%, 100% 0, 0 0);
+						transition: clip-path 1s;
 					}
 				}
 			}

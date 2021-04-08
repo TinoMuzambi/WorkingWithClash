@@ -380,13 +380,9 @@ body {
   gap: 2rem;
 }
 
-.forms .motion-wrap .card .content .troops .troop:hover .name {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
 .forms .motion-wrap .card .content .troops .troop:hover .level {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .forms .motion-wrap .card .content .troops .troop .troop-image {
@@ -399,7 +395,6 @@ body {
 .forms .motion-wrap .card .content .troops .level {
   background: #333333;
   padding: 0.5rem;
-  position: relative;
 }
 
 .forms .motion-wrap .card .content .troops .name.legend,
@@ -447,13 +442,13 @@ body {
   color: #898d8e;
 }
 
-.forms .motion-wrap .card .content .troops .name {
-  z-index: 1;
-}
-
 .forms .motion-wrap .card .content .troops .level {
-  -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 0, 0 0);
+          clip-path: polygon(0 1%, 100% 0%, 100% 0, 0 0);
+  -webkit-transition: -webkit-clip-path 1s;
+  transition: -webkit-clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s;
 }
 
 @media only screen and (max-width: 768px) {
