@@ -1,10 +1,5 @@
 import React from "react";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Card from "./components/Card";
 import "./css/App.min.css";
@@ -31,6 +26,11 @@ function App() {
 		<Router>
 			<Switch>
 				<Route exact path="/">
+					<CommonCardContent>
+						<Card content="player" />
+					</CommonCardContent>
+				</Route>
+				<Route exact path="/tag/:tag">
 					<CommonCardContent>
 						<Card content="player" />
 					</CommonCardContent>

@@ -3,10 +3,14 @@ import ReactJson from "react-json-view";
 import { ImSpinner8 } from "react-icons/im";
 import { withFormik, Field, Form } from "formik";
 import { motion, animate } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const Card = ({ content }) => {
 	const [contentJson, setContentJson] = useState("");
 	const [loading, setLoading] = useState(false);
+
+	const { tag } = useParams();
+	console.log(tag);
 
 	const MyForm = () => {
 		return (
