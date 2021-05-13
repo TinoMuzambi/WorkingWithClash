@@ -62,6 +62,7 @@ const Card = ({ content }) => {
 			setContentJson(data);
 		} catch (error) {
 			console.error(error);
+			alert("Please try a different tag.");
 		} finally {
 			setLoading(false);
 		}
