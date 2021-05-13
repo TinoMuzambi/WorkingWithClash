@@ -10,7 +10,13 @@ const Card = ({ content }) => {
 	const [loading, setLoading] = useState(false);
 
 	const { tag } = useParams();
-	console.log(tag);
+
+	useEffect(() => {
+		if (tag) {
+			getData(tag);
+		}
+		// eslint-disable-next-line
+	}, [tag]);
 
 	const MyForm = () => {
 		return (
