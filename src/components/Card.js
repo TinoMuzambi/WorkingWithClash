@@ -55,7 +55,7 @@ const Card = ({ content }) => {
 		setLoading(true);
 		let tag = nextTag.trim();
 		tag = tag.replace("#", "");
-		const URL = `https://wwc-server.herokuapp.com/api/${content}/${tag}`;
+		const URL = `https://wwc-server-production.up.railway.app/api/${content}/${tag}`;
 		try {
 			const result = await fetch(URL);
 			const data = await result.json();
